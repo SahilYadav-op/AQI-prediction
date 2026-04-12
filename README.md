@@ -70,38 +70,18 @@ After validating our approach on a 20% holdout test set, the metric evaluations 
 
 *(Points closer to the red diagonal line indicate perfectly accurate predictions).*
 
+## 🏆 Why This Project Stands Out
+
+### 🛑 What is Solved?
+Air pollution (PM 2.5) tracking typically relies on expensive IoT sensor arrays. This project solves the problem computationally by proving that high-accuracy dangerous PM 2.5 levels can be instantaneously predicted using foundational, easily accessible meteorological data (Temperature, Humdity, Wind Speed).
+
+### ⚡ How I Improved It?
+Instead of just applying a basic linear formula, I engineered a fully automated pipeline containing distinct Exploratory Data Analysis (EDA) stages. I analyzed the feature distribution skewness and extracted a Correlation Heatmap to physically prove which atmospheric conditions were directly suffocating environments before feeding them into the regression model.
+
+### 🚀 How is it Better Than Others?
+Many beginner repositories consist of massive, messy Python scripts. This project is built referencing professional MLOps templates. The directory strictly separates raw data, processed outputs, analytical notebooks, and modular source code (`train.py`, `predict.py`). It simulates a true industry-level data science environment capable of continuous automated training.
+
 ---
-
-## 🚀 Getting Started
-
-To reproduce this project locally, simply follow these steps.
-
-### 1. Clone & Setup
-```bash
-# Clone the repository
-git clone https://github.com/your-username/Air-Quality-Index-Predictor.git
-cd Air-Quality-Index-Predictor
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### 2. Retrain the Model
-Execute the continuous training script, which will automatically clean the data, generate graphs within the reports directory, extract metrics, and persist the new model to `models/`:
-```bash
-cd src
-python train.py
-```
-
-### 3. Run Inference
-You can directly input physical atmospheric features into the CLI and receive an instantaneous PM 2.5 prediction:
-```bash
-python predict.py --T 15.0 --H 80.0 --VM 12.5
-```
-**Example Output:**
-```text
-Predicted PM 2.5: 142.34
-```
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
